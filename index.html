@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asets/css/grid.css">
+    <link rel="stylesheet" href="./asets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="title">
+            <h1 class="title__header">
+                Đánh giá về người nghèo khó ở các quốc gia
+            </h1>
+        </div>
+        <div class="content">
+            <div class="row no-gutters">
+                <div class="col c-7">
+                    <img src="./asets/img/Content.png" alt="" class="content__img">
+                </div>
+                <div class="col c-5">
+                    <div class="content__title">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus tempus faucibus. 
+                            Maecenas ut ante maximus, ultrices dolor sit amet, cursus leo
+                        </span>
+                    </div>
+                    <div class="content__descritption">
+                        <span>
+                            Fusce sapien urna, rhoncus vitae quam lacinia, dapibus bibendum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper magna interdum libero sagittis, ac fringilla tellus dapibus. Proin ultrices lacus eget molestie faucibus. Phasellus tempus leo ac metus tincidunt, sed facilisis metus aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                            Vivamus sit amet odio eget justo mollis aliquet tempus et nisl.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content__main">
+                <p class="content__main-text">
+                    Chúng ta nói về sự nghèo khó của hầu hết các quốc gia. Fusce sapien urna, rhoncus vitae quam lacinia, dapibus bibendum metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam ullamcorper magna interdum libero sagittis, ac fringilla tellus dapibus. Proin ultrices lacus eget molestie faucibus. Phasellus tempus leo ac metus tincidunt, sed facilisis metus aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Vivamus sit amet odio eget justo mollis aliquet tempus et nisl.
+                </p>
+            </div>  
+
+
+            <table>
+                <tr class="table__header ">
+                    <th>Quốc gia</th>
+                    <th>Tỉ lệ</th>
+                    <th>Thu nhập TB</th>
+                    <th>Xem thêm</th>
+                </tr>   
+                <tr class="table__content">
+                    <td>Việt nam</td>
+                    <td>25%</td>
+                    <td>3000 $/yr</td>
+                    <td><button class="btn"> Xem thêm</button></td>
+                </tr>
+                <tr class="table__content">
+                    <td>Nepan</td>
+                    <td>32.3%</td>
+                    <td>2000 $/yr</td>
+                    <td><button class="btn"> Xem thêm</button></td>
+                </tr>
+                <tr class="table__content">
+                    <td>Ấn độ</td>
+                    <td>37.5%</td>
+                    <td>1200 $/yr</td>
+                    <td><button class="btn"> Xem thêm</button></td>
+                </tr>
+                <tr class="table__content">
+                    <td>Butan</td>
+                    <td>17%</td>
+                    <td>2300 $/yr</td>
+                    <td><button class="btn"> Xem thêm</button></td>
+                </tr>
+                <tr class="table__content">
+                    <td>Mongolia</td>
+                    <td>25%</td>
+                    <td>2100 $/yr</td>
+                    <td><button class="btn"> Xem thêm</button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="line__footer">
+        </div>
+
+        
+        <footer class="footer">
+            <div class="footer__content">
+                <img src="./asets/img/Footer.png" alt="" class="footer__content-img">
+                <div class="footer__content-text">
+                    <p class="footer__content-quote">
+                        “Many of life’s failures are people who did not
+                        realize how close they were to success when they gave up.”
+                    </p>
+                    <p class="footer__signature">
+                        Thomas A. Edison
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        arrQuote = [
+            {
+                author: 'Dalai Lama',
+                quote: '"The purpose of our lives is to be happy."',
+            },
+            {
+                author: 'Thomas A. Edison',
+                quote: '"Many of life’s failures are people who did not realize how close they were to success when they gave up."',
+            },
+            {
+                author: 'Babe Ruth',
+                quote: '"Never let the fear of striking out keep you from playing the game."',
+            },
+            {
+                author: 'Will Smith',
+                quote: '"Money and success don’t change people; they merely amplify what is already there."',
+            },
+            {
+                author: 'Steve Jobs',
+                quote: '"Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma – which is living with the results of other people’s thinking."',
+            },
+            {
+                author: 'Seneca',
+                quote: '"Not how long, but how well you have lived is the main thing',
+            },
+            {
+                author: 'Frank Sinatra',
+                quote: '"The big lesson in life, baby, is never be scared of anyone or anything."',
+            }
+        ]
+        const footer = document.querySelector('.footer__content-text')
+        const quotes = document.querySelector('.footer__content-quote')
+        const signature = document.querySelector('.footer__signature')
+        footer.addEventListener("click",function() {
+            const item = arrQuote[Math.floor(Math.random()*arrQuote.length)];
+            quotes.innerHTML = item.quote;
+            signature.innerHTML = item.author;
+        })
+    </script>
+</body>
+</html>
